@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+# -*- coding: utf-8 -*-
 灵活的问题处理 AI 教练
 使用 Claude API 实现自然对话式教练
 """
