@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
- # -*- coding: utf-8 -*-
-AI 问题处理教练 - Web 版
+ #!/usr/bin/env python3
+  # -*- coding: utf-8 -*-
+  """
+  AI 问题处理教练 - Web 版
 """
 
 import streamlit as st
