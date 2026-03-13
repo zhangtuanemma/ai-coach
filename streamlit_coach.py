@@ -204,7 +204,7 @@ if prompt := st.chat_input("输入你的消息..."):
             with client.messages.stream(
                 model="claude-sonnet-4-6",
                 max_tokens=500,
-                system=COACHING_FRAMEWORK,
+                system=COACHING_FRAMEWORK.encode('utf-8').decode('utf-8'),
                 messages=messages
             ) as stream:
                 for text in stream.text_stream:
@@ -219,3 +219,6 @@ if prompt := st.chat_input("输入你的消息..."):
     except Exception as e:
         st.error(f"错误：{str(e)}")
         st.info("请检查API密钥是否正确")
+        # 显示详细错误信息用于调试
+        import traceback
+        st.code(traceback.format_exc())
