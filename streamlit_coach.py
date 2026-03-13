@@ -7,7 +7,14 @@
 
 import streamlit as st
 import os
+import sys
 from anthropic import Anthropic
+
+# 确保UTF-8编码
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr.reconfigure(encoding='utf-8')
 
 # 页面配置
 st.set_page_config(
